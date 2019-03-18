@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Space+Mono');
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Space Mono', monospace; */
+/* pink: #FBDDDB */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #FFAFBD;
+  background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);
+  background: linear-gradient(to right, #ffc3a0, #FFAFBD);
+}
+
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+h1, h2, h3 {
+  font-family: 'Space Mono', monospace;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin:10px;
+  font-family: 'Space Mono', monospace;
+  /* position: fixed; */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
+nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.main-content {
+
+}
+
+.side {
+  padding: 15px;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.name {
+  text-align: center;
+}
+
+.name p {
+  font-size: 25px;
+}
+
+.icon {
+  font-size: 100px;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 70vh auto auto 50vh 1fr;
+  grid-template-areas:
+    "about"
+    "projects"
+    "skills"
+    "contact"
+    "footer";
+}
+
+.about {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-areas:
+    "icon text";
+  align-items: center;
+  background-color: rgba(255,255, 255, 0.4);
+  padding: 20px;
+  margin: 20px;
+}
+
+
+.about-icon {
+  grid-area: icon;
+  font-size: 100px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.about-content {
+  grid-area: text;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.about p {
+  margin: 0 auto;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: rgba(255,255, 255, 0.4);
+  padding: 20px;
+  margin: 20px;
+}
+
+.projects h3 {
+  text-align: center;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-areas:
+    "image description";
+}
+
+.project-image {
+  grid-area: image;
+}
+
+.image {
+  height: 150px;
+  width: 200px;
+  padding: 15px;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+
+.description {
+  grid-area: description;
+  padding: 10px;
+}
+
+a.button {
+    text-decoration: none;
+    color: initial;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.skills {
+  grid-area: skills;
+  background-color: rgba(255,255, 255, 0.4);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 50px;
+  align-items: center;
+}
+
+.box {
+  height: 150px;
+  font-size: 20px;
+}
+
+.cv {
+  text-decoration: none;
+  color: black;
+
+}
+
+.cv:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: rgba(255,255, 255, 0.4);
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-areas:
+    "icon contact";
+  align-items: center;
+}
+
+.fa-comment-alt {
+  font-size: 100px;
+}
+
+.contact-icon {
+  text-align: center;
+}
+
+.links {
+  align-items: center;
+  padding: 40px;
+  grid-area: contact;
+}
+
+
+.links a {
+  text-decoration: none;
+  color: black;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.links i {
+  font-size: 25px;
+}
+
+footer {
+  text-align: center;
+  grid-area: footer;
+  background-color: rgba(255,255, 255, 0.4);
+  padding: 20px;
+  margin: 20px;
+}
