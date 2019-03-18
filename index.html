@@ -8,16 +8,17 @@
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src='js/main.js'></script>
 </head>
 <body>
 
 <div class="container">
   <div class="nabar">
-    <nav class='topnav' id='myTopnav'>
+    <nav class='topnav'>
       <a href="#" class='active'>Home</a>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -40,10 +41,10 @@
           <i class="far fa-user"></i>
         </div>
         <div class="about-content">
-          <p>Hello!</p>
-          <p>I'm Jess, and I'm a full stack web developer with a passion for solving real world problems.  <p><br>
+          <p>Hello!</p><br>
+          <p>I'm Jess, and I'm a full stack web developer with a passion for solving real world problems.<p><br>
 
-          <p>With a background in customer service and marketing, I thrive on working with all kinds of people from different backgrounds and love taking on new challenges. </p><br>
+          <p>With a background in customer service and marketing, I thrive on working with all kinds of people from different backgrounds and love taking on new challenges.</p><br>
 
           <p>After recently finishing a 3 month bootcamp at General Assembly Sydney, I'm now seeking work in my first role as a developer. I'm very excited for my first opportunity!</p>
         </div>
@@ -58,9 +59,12 @@
             </div>
             <div class="description">
               <h4>0.Tic-tac-toe</h4>
+              <p>A game made as the very first project in the General Assembly WDI course.</p>
               <p>Tech: HTML, CSS, Javascript, JQuery</p>
-              <a href="https://jessdiv.github.io/Project-0/" target="_blank" class='button'>Demo </a>
-              <a href="https://github.com/jessdiv/Project-0" target="_blank" class='button'>Github </a>
+              <div class="buttons">
+                <a href="https://jessdiv.github.io/Project-0/" target="_blank" class='button'> Demo </a>
+                <a href="https://github.com/jessdiv/Project-0" target="_blank" class='button'>Github </a>
+              </div>
             </div>
           </div>
 
@@ -70,10 +74,12 @@
             </div>
             <div class="description">
               <h4>1. Spearhead </h4>
-              <p>Peer to peer camera gear rental platform</p>
+              <p>A peer to peer camera gear rental platform</p>
               <p>Tech: HTML, CSS, Ruby on Rails, Heroku, Bootstrap, PostGresQL</p>
-              <a href="https://spearhead-app.herokuapp.com" target="_blank" class='button'>Demo </a>
-              <a href="https://github.com/jessdiv/Project-1" target="_blank" class='button'>Github </a>
+              <div class="buttons">
+                <a href="https://spearhead-app.herokuapp.com" target="_blank" class='button'> Demo </a>
+                <a href="https://github.com/jessdiv/Project-1" target="_blank" class='button'>Github </a>
+            </div>
             </div>
 
           </div>
@@ -83,11 +89,13 @@
             </div>
             <div class="description">
               <h4>2. Visualeyes </h4>
-              <p> World Data Visualisation Project representing data from 1961 - 2017 in the categories: </p>
-              <p>Tech: d3, javascript, JQuery, Rails, Heroku
+              <p> World Data Visualisation Project representing the GDP, population, life expectancy and land area of 15 countries from the years 1961 - 2017 </p>
+              <p>Tech: d3.js, javascript, JQuery, Rails, Heroku
               </p>
-              <a href="https://jessdiv.github.io/project2-visualeyes/" target="_blank" class='button'>Demo </a>
-              <a href="https://jessdiv.github.io/project2-visualeyes/" target="_blank" class='button'>Github </a>
+              <div class="buttons">
+                <a href="https://jessdiv.github.io/project2-visualeyes/" target="_blank" class='button'> Demo </a>
+                <a href="https://jessdiv.github.io/project2-visualeyes/" target="_blank" class='button'>Github </a>
+              </div>
             </div>
           </div>
 
@@ -97,10 +105,12 @@
             </div>
             <div class="description">
               <h4>3. Syd-ax</h4>
-              <p> Trip planner tailored to assist wheelchair users </p>
-                <p>Tech: Rails backend, React front-end, Transport NSW API, github pages</p>
-               <a href="https://jessdiv.github.io/project3-syd-ax/#/" target="_blank" class='button'>Demo </a>
-               <a href="https://jessdiv.github.io/project3-syd-ax/#/" target="_blank" class='button'>Github </a>
+              <p> Trip planner tailored to assist wheelchair users navigate Sydney trains.</p>
+              <p>Tech: Rails backend, React front-end, Transport NSW API, github pages</p>
+              <div class="buttons">
+                <a href="https://jessdiv.github.io/project3-syd-ax/#/" target="_blank" class='button'> Demo </a>
+                <a href="https://jessdiv.github.io/project3-syd-ax/#/" target="_blank" class='button'>Github </a>
+              </div>
             </div>
           </div>
       </div>
@@ -110,7 +120,7 @@
           <div class='box'>HTML</div>
           <div class='box'>CSS</div>
           <div class='box'>Javascript</div>
-          <div class='box'>React</div>
+          <div class='box'>ReactJS</div>
           <div class='box'>d3.js</div>
           <div class='box'>Ruby on Rails</div>
           <div class='box'>a11y</div>
@@ -136,6 +146,7 @@
       </div>
     </div>
 
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="far fa-arrow-alt-circle-up"></i></button>
 
       <footer>
         <p>&copy; Jessica Diver 2019</p>

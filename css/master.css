@@ -24,10 +24,10 @@ h1, h2, h3 {
 }
 
 nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin:10px;
+  display: flex;
+  margin: 10px;
   font-family: 'Space Mono', monospace;
+  justify-content: space-between;
   /* position: fixed; */
 }
 
@@ -35,15 +35,12 @@ nav a {
   text-decoration: none;
   color: white;
   font-size: 25px;
+  justify-content: space-between;
 }
 
 nav a:hover {
   color: white;
   text-decoration: underline;
-}
-
-.main-content {
-
 }
 
 .side {
@@ -80,10 +77,8 @@ h1 {
 
 .about {
   grid-area: about;
-  display: grid;
-  grid-template-columns: 2fr 4fr;
-  grid-template-areas:
-    "icon text";
+  display: flex;
+  flex-direction: row;
   align-items: center;
   background-color: rgba(255,255, 255, 0.4);
   padding: 20px;
@@ -92,16 +87,16 @@ h1 {
 
 
 .about-icon {
-  grid-area: icon;
   font-size: 100px;
-  max-width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 .about-content {
   grid-area: text;
   font-size: 20px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .about p {
@@ -113,6 +108,8 @@ h1 {
   background-color: rgba(255,255, 255, 0.4);
   padding: 20px;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects h3 {
@@ -120,30 +117,31 @@ h1 {
 }
 
 .project {
-  display: grid;
-  grid-template-columns: 2fr 4fr;
-  grid-template-areas:
-    "image description";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .project-image {
-  grid-area: image;
+  text-align: center;
+  width: 100%:
 }
 
 .image {
   height: 150px;
   width: 200px;
-  padding: 15px;
+  padding: 20px;
 }
+
 
 .image:hover {
   transform: scale(1.1);
 }
 
-
 .description {
-  grid-area: description;
-  padding: 10px;
+  grid-area: text;
+  margin: 0 auto;
+  width: 100%;
 }
 
 a.button {
@@ -154,6 +152,14 @@ a.button {
     border-radius: 12px;
     background-color: white;
     margin-right: 10px;
+}
+
+a.button:hover {
+  background-color: #eee;
+}
+
+.buttons {
+  text-align: center;
 }
 
 .skills {
@@ -192,31 +198,42 @@ a.button {
   background-color: rgba(255,255, 255, 0.4);
   padding: 20px;
   margin: 20px;
-  display: grid;
-  grid-template-columns: 2fr 4fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "icon contact";
+  align-items: center; */
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  padding: 20px;
+  margin: 20px;
 }
 
 .fa-comment-alt {
   font-size: 100px;
+  width: 100%;
+  text-align: center;
 }
 
 .contact-icon {
   text-align: center;
+  width: 100%;
 }
 
 .links {
   align-items: center;
   padding: 40px;
-  grid-area: contact;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 
 .links a {
   text-decoration: none;
   color: black;
+  margin: 0 auto;
 }
 
 .links a:hover {
@@ -226,6 +243,30 @@ a.button {
 
 .links i {
   font-size: 25px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+#myBtn:hover {
+  background-color: black;
+}
+
+.fa-arrow-alt-circle-up {
+  font-size: 25px;
+  color: #ccc;
 }
 
 footer {
