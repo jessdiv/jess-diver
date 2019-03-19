@@ -6,9 +6,9 @@ $(document).ready(function(){
         $target = $(target);
 
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - 50
+            'scrollTop': $target.offset().top
         }, 1000, 'swing', function () {
-            window.location.hash = target - 50;
+            window.location.hash = target;
         });
     });
 });
@@ -27,4 +27,4 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+}
