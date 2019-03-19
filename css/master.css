@@ -11,7 +11,6 @@ body {
   background: linear-gradient(to right, #ffc3a0, #FFAFBD);
 }
 
-background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 
 h1, h2, h3 {
   font-family: 'Space Mono', monospace;
@@ -27,15 +26,40 @@ nav {
   display: flex;
   margin: 10px;
   font-family: 'Space Mono', monospace;
-  justify-content: space-between;
-  /* position: fixed; */
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 750px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .container {
+    /* padding: 0; */
+  }
+
 }
 
 nav a {
   text-decoration: none;
   color: white;
   font-size: 25px;
-  justify-content: space-between;
+}
+
+@media only screen and (max-width: 750px) {
+  nav a {
+    font-size: 20px;
+    margin: 0 10px;
+    justify-content: center;
+    min-width: 95px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  nav a {
+    font-size: 15px;
+    min-width: 50px;
+  }
 }
 
 nav a:hover {
@@ -64,19 +88,41 @@ h1 {
   font-size: 100px;
 }
 
-.main {
-  display: grid;
-  grid-template-rows: auto auto auto auto 1fr;
-  grid-template-areas:
-    "about"
-    "projects"
-    "skills"
-    "contact"
-    "footer";
+@media only screen and (max-width: 750px) {
+  .side {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .name p {
+    font-size: 25px;
+  }
+
+  .icon {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .name p {
+    font-size: 20px;
+  }
+
+  .icon {
+    font-size: 50px;
+  }
 }
 
 .about {
-  grid-area: about;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,7 +132,6 @@ h1 {
   height: auto;
 }
 
-
 .about-icon {
   font-size: 100px;
   width: 100%;
@@ -94,7 +139,6 @@ h1 {
 }
 
 .about-content {
-  grid-area: text;
   font-size: 20px;
   margin: 0 auto;
   width: 100%;
@@ -104,8 +148,36 @@ h1 {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 750px) {
+  .about {
+    flex-wrap: wrap;
+  }
+
+  .about-icon {
+    font-size: 80px;
+    padding-bottom: 15px;
+  }
+
+  .about-content {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .about {
+
+  }
+
+  .about-icon {
+    font-size: 50px;
+  }
+
+  .about-content {
+    font-size: 15px;
+  }
+}
+
 .projects {
-  grid-area: projects;
   background-color: rgba(255,255, 255, 0.4);
   padding: 20px;
   margin: 20px;
@@ -123,16 +195,32 @@ h1 {
   align-items: center;
 }
 
+@media only screen and (max-width: 750px) {
+  .project {
+    flex-wrap: wrap;
+  }
+
+  .h4 {
+
+  }
+}
+
 .project-image {
   text-align: center;
   width: 100%;
-  /* padding-left: 20px; */
 }
 
 .image {
   height: 200px;
-  width: 250px;
-  padding: 25px;
+  width: 100%;
+  max-width: 250px;
+  padding: 25px 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .image {
+    margin: 0 auto;
+  }
 }
 
 
@@ -176,22 +264,45 @@ a.button:hover {
 }
 
 .skill {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   padding: 50px;
   align-items: center;
 }
 
+.skilled {
+  display: flex;
+  justify-content: space-around;
+}
+
 .box {
-  height: 150px;
+  width: 25%;
   font-size: 1.2em;
   border: solid white 2px;
   line-height: 150px;
   margin: 10px;
   border-radius: 12px;
+  padding: 10px;
 }
 
-.box:hover {
+@media only screen and (max-width: 760px) {
+  .skill {
+    font-size: 0.9em;
+  }
+
+  .box {
+    width: 25%;
+    height: auto;
+    font-size: 1.2em;
+    border: solid white 2px;
+    line-height: 150px;
+    margin: 10px;
+    border-radius: 12px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .box {
+    height: 100px;
+  }
 }
 
 
@@ -210,11 +321,6 @@ a.button:hover {
   background-color: rgba(255,255, 255, 0.4);
   padding: 20px;
   margin: 20px;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "icon contact";
-  align-items: center; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -256,6 +362,37 @@ a.button:hover {
 .links i {
   font-size: 25px;
 }
+
+@media only screen and (max-width: 750px) {
+  .contact {
+    flex-wrap: wrap;
+  }
+
+  .contact-icon {
+    font-size: 80px;
+    padding-top: 25px;
+  }
+
+  .links {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .contact {
+    flex-wrap: wrap;
+  }
+
+  .contact-icon {
+    font-size: 50px;
+    padding-top: 25px;
+  }
+
+  .links {
+    font-size: 15px;
+  }
+}
+
 
 #myBtn {
   display: none;
